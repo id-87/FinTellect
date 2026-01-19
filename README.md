@@ -25,3 +25,43 @@ Tech-stack:
     ML:
         Upcoming
     
+
+DB design:
+    USER:
+        _id
+        name
+        username
+        hashedPassword
+        role
+        createdAt
+    
+    TRANSACTIONS:
+        _id
+        userID
+        type(debit/credit)
+        amount
+        category
+        status(success/failed/flagged)
+        fraudScore(to be added later)
+        createdAt
+        updatedAt
+    
+    BUDGET:
+        _id
+        userID
+        category
+        monthlyLimit
+        createdAt
+        updatedAt
+    
+    ALERT:
+        _id
+        userID
+        type(fraud/budget/system)
+        message
+        relatedTransactionID(optional)
+        isRead
+        createdAt
+
+    ML metadata:
+        To be added later
